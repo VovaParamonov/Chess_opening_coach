@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { ChessBoard } from '@/components/ChessBoard/ChessBoard';
+import styled from "styled-components";
+
+import GameSession from "@/components/ChessGameSession/GameSession";
 
 const AppWrapperStyled = styled.main`
   text-align: center;
@@ -7,18 +8,10 @@ const AppWrapperStyled = styled.main`
   height: 100%;
 `;
 
-const BoardWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-
 export default function App() {
   return (
     <AppWrapperStyled>
-      <BoardWrapper>
-        <ChessBoard />
-      </BoardWrapper>
+      <GameSession />
     </AppWrapperStyled>
   );
 }

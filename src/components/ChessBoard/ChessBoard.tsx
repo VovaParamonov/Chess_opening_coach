@@ -1,8 +1,10 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { useMemo, useRef } from 'react';
-import { ChessBoardCell } from '@/components/ChessBoard/ChessBoardCell/ChessBoardCell';
-import { default as ChessBoardModel } from './Model';
+import * as React from "react";
+import { useCallback, useRef, useState } from "react";
+import styled from "styled-components";
+
+import { ChessBoardCell } from "@/components/ChessBoard/ChessBoardCell/ChessBoardCell";
+import { default as ChessBoardModel } from "@/model/ChessBoard/ChessBoard";
+import { default as ChessBoardCellModel } from "@/model/ChessBoard/ChessBoardCell/ChessBoardCell";
 
 const ChessBoardStyled = styled.div`
   border: 1px solid black;
@@ -13,21 +15,96 @@ const ChessBoardStyled = styled.div`
   flex-flow: wrap-reverse;
 `;
 
-interface IChessBoardProps {
+const BoardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
+interface IChessBoardProps {
+  chessBoard: ChessBoardModel;
+  chessBoardChange: (newBoard: ChessBoardModel) => void;
 }
 
 export const ChessBoard = (props: IChessBoardProps) => {
+  const { chessBoard, chessBoardChange } = props;
+  const [selectedFilledCell, setSelectedFilledCell] =
+    useState<ChessBoardCellModel | null>(null);
   const boardRef = useRef<HTMLDivElement>(null);
-  const chessBoard = useMemo(() => new ChessBoardModel(), []);
+
+  const handleCellClick = useCallback(
+    (cell: ChessBoardCellModel) => {
+      if (
+        selectedFilledCell &&
+        selectedFilledCell
+          .getCurrentFigure()
+          ?.canPlaced(
+            chessBoard.getRows(),
+            selectedFilledCell.getCoords(),
+            cell.getCoords()
+          )
+      ) {
+        chessBoardChange(
+          chessBoard.updateFigurePosition(
+            selectedFilledCell.getCoords(),
+            cell.getCoords()
+          )
+        );
+        setSelectedFilledCell(null);
+        return;
+      }
+      setSelectedFilledCell(cell.isEmpty() ? null : cell);
+    },
+    [chessBoard, chessBoardChange, selectedFilledCell]
+  );
+
+  const checkMovableCell = (cell: ChessBoardCellModel) => {
+    if (!selectedFilledCell) {
+      return undefined;
+    }
+
+    const figure = selectedFilledCell.getCurrentFigure();
+
+    if (!figure) {
+      return undefined;
+    }
+
+    if (
+      figure.canMove(
+        chessBoard.getRows(),
+        selectedFilledCell.getCoords(),
+        cell.getCoords()
+      )
+    ) {
+      return "canMove";
+    }
+
+    if (
+      figure.canAttack(
+        chessBoard.getRows(),
+        selectedFilledCell.getCoords(),
+        cell.getCoords()
+      )
+    ) {
+      return "canAttack";
+    }
+  };
 
   return (
-    <ChessBoardStyled ref={boardRef}>
-      {chessBoard.board.map(boardRow => (
-        boardRow.map(cell => (
-          <ChessBoardCell cell={cell} key={`${cell.coords[0]}${cell.coords[1]}`}/>
-        ))
-      ))}
-    </ChessBoardStyled>
+    <BoardWrapper>
+      <ChessBoardStyled ref={boardRef}>
+        {chessBoard
+          .getRows()
+          .map(boardRow =>
+            boardRow.map(cell => (
+              <ChessBoardCell
+                key={`${cell.getCoords()[0]}${cell.getCoords()[1]}`}
+                visualEffect={checkMovableCell(cell)}
+                cell={cell}
+                onClick={handleCellClick}
+              />
+            ))
+          )}
+      </ChessBoardStyled>
+    </BoardWrapper>
   );
-}
+};
