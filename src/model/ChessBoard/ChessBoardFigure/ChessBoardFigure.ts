@@ -1,17 +1,18 @@
-import { ChessBoardRows } from "@/model/ChessBoard/ChessBoard";
+import ChessBoard from "@/model/ChessBoard/ChessBoard";
 import ChessBoardCell from "@/model/ChessBoard/ChessBoardCell/ChessBoardCell";
 
 function checkKingIsUnderAttack(
-  board: ChessBoardRows,
+  board: ChessBoard,
   side: "white" | "black"
 ) {
-  const kingCell: ChessBoardCell | null = null;
+  const boardRows = board.getRows();
+  let kingCell: ChessBoardCell | null = null;
 
-  for (const row of board) {
+  for (const row of boardRows) {
     for (const cell of row) {
       const figure = cell.getCurrentFigure();
       if (figure && figure.getType() === "king" && figure.getSide() === side) {
-        kingCell === cell;
+        kingCell = cell;
         break;
       }
       if (kingCell) {
@@ -20,25 +21,26 @@ function checkKingIsUnderAttack(
     }
   }
 
-  return board.some(row =>
+  return boardRows.some(row =>
     row.some(cell => {
       const figure = cell.getCurrentFigure();
 
-      let coords;
       return (
-        figure && figure.getSide() !== side
-        // figure.canAttack(board, cell.getCoords(), coords)
+        figure && figure.getSide() !== side &&
+        figure.canAttack(board, cell.getCoords(), (kingCell!).getCoords())
       );
     })
   );
 }
 
 function checkCellIsUnderAttack(
-  board: ChessBoardRows,
+  board: ChessBoard,
   side: "white" | "black",
   coords: [number, number]
 ) {
-  return board.some(row =>
+  const boardRows = board.getRows();
+
+  return boardRows.some(row =>
     row.some(cell => {
       const figure = cell.getCurrentFigure();
 
@@ -52,10 +54,11 @@ function checkCellIsUnderAttack(
 }
 
 function checkFiguresBetweenCells(
-  board: ChessBoardRows,
+  board: ChessBoard,
   startCoords: [number, number],
   targetCoords: [number, number]
 ) {
+  const boardRows = board.getRows();
   const xDiff = targetCoords[0] - startCoords[0];
   const yDiff = targetCoords[1] - startCoords[1];
 
@@ -68,7 +71,7 @@ function checkFiguresBetweenCells(
   if (xDiff !== 0 && yDiff !== 0 && Math.abs(xDiff) === Math.abs(yDiff)) {
     for (let i = startCoords[0] + 1; i < targetCoords[0]; i++) {
       for (let j = startCoords[1] + 1; j < targetCoords[1]; j++) {
-        if (!board[i][j].isEmpty()) {
+        if (!boardRows[i][j].isEmpty()) {
           return true;
         }
       }
@@ -82,7 +85,7 @@ function checkFiguresBetweenCells(
     const direction = xDiff / Math.abs(xDiff);
 
     for (let i = startCoords[0] + 1; i !== targetCoords[0]; i += direction) {
-      if (!board[i][startCoords[1]].isEmpty()) {
+      if (!boardRows[i][startCoords[1]].isEmpty()) {
         return true;
       }
     }
@@ -95,7 +98,7 @@ function checkFiguresBetweenCells(
     const direction = yDiff / Math.abs(yDiff);
 
     for (let j = startCoords[1] + 1; j !== targetCoords[1]; j += direction) {
-      if (!board[startCoords[0]][j].isEmpty()) {
+      if (!boardRows[startCoords[0]][j].isEmpty()) {
         return true;
       }
     }
@@ -133,19 +136,19 @@ export interface IChessBoardFigure {
   getSide(): "white" | "black";
 
   canPlaced(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean;
 
   canMove(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean;
 
   canAttack(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean;
@@ -153,6 +156,8 @@ export interface IChessBoardFigure {
   getIcon(): string;
 
   clone(changes?: Partial<IChessBoardFigureDescriptor>): ChessBoardFigure;
+
+  compare(figure: ChessBoardFigure): boolean;
 }
 
 abstract class ChessBoardFigure implements IChessBoardFigure {
@@ -166,8 +171,15 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
     this._icon = descriptor.icon;
   }
 
+  compare(figure: ChessBoardFigure): boolean {
+    return (
+      figure.getType() === this.getType() &&
+      figure.getSide() === this.getSide()
+    )
+  }
+
   canPlaced(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean {
@@ -203,17 +215,44 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
     );
   }
 
-  abstract canMove(
-    board: ChessBoardRows,
+  canMove(
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
-  ): boolean;
+  ): boolean {
+    let tmpBoard = board.clone();
 
-  abstract canAttack(
-    board: ChessBoardRows,
+    const startCell = tmpBoard.getCell(startCoords);
+    const targetCell = tmpBoard.getCell(targetCoords);
+    const startFigure = startCell.getCurrentFigure();
+
+    // Check cells are empty
+    if (
+      !startFigure ||
+      !this.compare(startFigure) ||
+      !targetCell.isEmpty()
+    ) {
+      return false;
+    }
+
+    tmpBoard = tmpBoard.updateFigurePosition(startCoords, targetCoords);
+
+    if (checkKingIsUnderAttack(tmpBoard, this.getSide())) {
+      return false;
+    }
+
+    return true;
+  }
+
+  canAttack(
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
-  ): boolean;
+  ): boolean {
+    return (
+      this._isEnemyOnCell(board.getCell(targetCoords))
+    );
+  }
 
   static spawnFigure(
     type: "king",
@@ -260,7 +299,7 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
   }
 }
 
-type IChessBoardFigureChildDescription = Omit<
+export type IChessBoardFigureChildDescription = Omit<
   IChessBoardFigureDescriptor,
   "type" | "icon"
 >;
@@ -275,20 +314,19 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
   }
 
   canMove(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean {
     return (
       Math.abs(targetCoords[0] - startCoords[0]) <= 1 &&
       Math.abs(targetCoords[1] - startCoords[1]) <= 1 &&
-      board[targetCoords[0]][targetCoords[1]].isEmpty() &&
-      !checkCellIsUnderAttack(board, this.getSide(), targetCoords)
+      super.canMove(board, startCoords, targetCoords)
     );
   }
 
   canAttack(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean {
@@ -296,7 +334,7 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
       Math.abs(targetCoords[0] - startCoords[0]) <= 1 &&
       Math.abs(targetCoords[1] - startCoords[1]) <= 1 &&
       !checkFiguresBetweenCells(board, startCoords, targetCoords) &&
-      this._isEnemyOnCell(board[targetCoords[0]][targetCoords[1]])
+      super.canAttack(board, startCoords, targetCoords)
     );
   }
 }
@@ -311,20 +349,22 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
   }
 
   canMove(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean {
     // Exclude move on x line
-    // Exclude nonEmpty field
     if (
-      targetCoords[1] - startCoords[1] !== 0 ||
-      !board[targetCoords[0]][targetCoords[1]].isEmpty()
+      targetCoords[1] - startCoords[1] !== 0
     ) {
       return false;
     }
 
     const yDiff = targetCoords[0] - startCoords[0];
+
+    if (!super.canMove(board, startCoords, targetCoords)) {
+      return false;
+    }
 
     // If first step of pawn
     if (
@@ -343,7 +383,7 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
   }
 
   canAttack(
-    board: ChessBoardRows,
+    board: ChessBoard,
     startCoords: [number, number],
     targetCoords: [number, number]
   ): boolean {
@@ -354,7 +394,7 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
         ? targetCoords[0] - startCoords[0] === 1
         : targetCoords[0] - startCoords[0] === -1) &&
       Math.abs(targetCoords[1] - startCoords[1]) === 1 &&
-      this._isEnemyOnCell(board[targetCoords[0]][targetCoords[1]])
+      super.canAttack(board, startCoords, targetCoords)
     );
   }
 

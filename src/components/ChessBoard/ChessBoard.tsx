@@ -38,7 +38,7 @@ export const ChessBoard = (props: IChessBoardProps) => {
         selectedFilledCell
           .getCurrentFigure()
           ?.canPlaced(
-            chessBoard.getRows(),
+            chessBoard,
             selectedFilledCell.getCoords(),
             cell.getCoords()
           )
@@ -70,7 +70,7 @@ export const ChessBoard = (props: IChessBoardProps) => {
 
     if (
       figure.canMove(
-        chessBoard.getRows(),
+        chessBoard,
         selectedFilledCell.getCoords(),
         cell.getCoords()
       )
@@ -80,7 +80,7 @@ export const ChessBoard = (props: IChessBoardProps) => {
 
     if (
       figure.canAttack(
-        chessBoard.getRows(),
+        chessBoard,
         selectedFilledCell.getCoords(),
         cell.getCoords()
       )

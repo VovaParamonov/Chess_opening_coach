@@ -14,11 +14,15 @@ export interface IChessBoardCell {
 
   getCurrentFigure(): IChessBoardFigure | null;
 
+  setCurrentFigure(figure: ChessBoardFigure): ChessBoardCell;
+
   clone(changes?: Partial<IChessBoardCellDescriptor>): ChessBoardCell;
 
   toDescriptor(): IChessBoardCellDescriptor;
 
   isOnCoords(coords: [number, number]): boolean;
+
+  clear(): ChessBoardCell;
 }
 
 export default class ChessBoardCell implements IChessBoardCell {
@@ -30,12 +34,24 @@ export default class ChessBoardCell implements IChessBoardCell {
     this._currentFigure = descriptor.currentFigure || null;
   }
 
+  clear() {
+    return this.clone({
+      currentFigure: null
+    });
+  }
+
   getCoords() {
     return this._coords;
   }
 
   getCurrentFigure(): ChessBoardFigure | null {
     return this._currentFigure;
+  }
+
+  setCurrentFigure(currentFigure: ChessBoardFigure): ChessBoardCell {
+    return this.clone({
+      currentFigure: currentFigure
+    });
   }
 
   getColor() {
