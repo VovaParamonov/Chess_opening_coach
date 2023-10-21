@@ -63,17 +63,18 @@ function checkFiguresBetweenCells(
   const yDiff = targetCoords[1] - startCoords[1];
 
   // Too close
-  if (xDiff <= 1 && yDiff <= 1) {
+  if (Math.abs(xDiff) <= 1 && Math.abs(yDiff) <= 1) {
     return false;
   }
 
+  const xDir = xDiff / Math.abs(xDiff);
+  const yDir = yDiff / Math.abs(yDiff);
+
   // Diagonal
-  if (xDiff !== 0 && yDiff !== 0 && Math.abs(xDiff) === Math.abs(yDiff)) {
-    for (let i = startCoords[0] + 1; i < targetCoords[0]; i++) {
-      for (let j = startCoords[1] + 1; j < targetCoords[1]; j++) {
-        if (!boardRows[i][j].isEmpty()) {
-          return true;
-        }
+  if (Math.abs(xDiff) === Math.abs(yDiff)) {
+    for (let counter = 1; counter < Math.min(Math.abs(xDiff), Math.abs(yDiff)); counter++) {
+      if (!boardRows[startCoords[0] + counter * xDir][startCoords[1] + counter * yDir].isEmpty()) {
+        return true;
       }
     }
 
@@ -82,9 +83,7 @@ function checkFiguresBetweenCells(
 
   // Horizontal
   if (Math.abs(xDiff) !== 0 && yDiff === 0) {
-    const direction = xDiff / Math.abs(xDiff);
-
-    for (let i = startCoords[0] + 1; i !== targetCoords[0]; i += direction) {
+    for (let i = startCoords[0] + xDir; i !== targetCoords[0]; i += xDir) {
       if (!boardRows[i][startCoords[1]].isEmpty()) {
         return true;
       }
@@ -95,9 +94,8 @@ function checkFiguresBetweenCells(
 
   // Vertical
   if (xDiff === 0 && Math.abs(yDiff) !== 0) {
-    const direction = yDiff / Math.abs(yDiff);
 
-    for (let j = startCoords[1] + 1; j !== targetCoords[1]; j += direction) {
+    for (let j = startCoords[1] + yDir; j !== targetCoords[1]; j += yDir) {
       if (!boardRows[startCoords[0]][j].isEmpty()) {
         return true;
       }
@@ -265,7 +263,7 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
   static spawnFigure(
     type: "bishop",
     descriptor: IChessBoardFigureChildDescription
-  ): ChessBoardFigurePawn;
+  ): ChessBoardFigureBishop;
   static spawnFigure(
     type: "rook",
     descriptor: IChessBoardFigureChildDescription
@@ -412,10 +410,42 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
   }
 }
 
+class ChessBoardFigureBishop extends ChessBoardFigure {
+  constructor(description: IChessBoardFigureChildDescription) {
+    super({
+      type: 'bishop',
+      ...description,
+      icon: 'B'
+    });
+  }
+  
+  checkMovePattern(startCoords: [number, number], targetCoords: [number, number]) {
+    return (
+      Math.abs(targetCoords[0] - startCoords[0]) === Math.abs(targetCoords[1] - startCoords[1])
+    );
+  }
+
+  canMove(board: ChessBoard, startCoords: [number, number], targetCoords: [number, number]): boolean {
+    return (
+      this.checkMovePattern(startCoords, targetCoords) &&
+      !checkFiguresBetweenCells(board, startCoords, targetCoords) &&
+      super.canMove(board, startCoords, targetCoords)
+    );
+  }
+
+  canAttack(board: ChessBoard, startCoords: [number, number], targetCoords: [number, number]): boolean {
+    return (
+      this.checkMovePattern(startCoords, targetCoords) &&
+      !checkFiguresBetweenCells(board, startCoords, targetCoords) &&
+      super.canAttack(board, startCoords, targetCoords)
+    );
+  }
+}
+
 export const figuresMap = {
   king: ChessBoardFigureKing,
   pawn: ChessBoardFigurePawn,
-  bishop: ChessBoardFigurePawn,
+  bishop: ChessBoardFigureBishop,
   rook: ChessBoardFigurePawn,
   queen: ChessBoardFigurePawn,
   knights: ChessBoardFigurePawn,

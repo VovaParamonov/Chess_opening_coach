@@ -5,32 +5,33 @@ import ChessBoardFigure, {
 } from './ChessBoardFigure/ChessBoardFigure';
 
 function getChessBoardStartMap(): (IChessBoardFigureChildDescription & { type: FigureType } | null)[][] {
-  const wKing: IChessBoardFigureChildDescription & { type: FigureType } = {
-    type: 'king',
-    side: 'white'
-  };
-  const bKing: IChessBoardFigureChildDescription & { type: FigureType } = {
-    type: 'king',
-    side: 'black'
-  };
-  const wPawn: IChessBoardFigureChildDescription & { type: FigureType } = {
-    type: 'pawn',
-    side: 'white'
+  function b(desc: { type: FigureType }): IChessBoardFigureChildDescription & { type: FigureType } {
+    return {...desc, side: 'black'};
   }
-  const bPawn: IChessBoardFigureChildDescription & { type: FigureType } = {
-    type: 'pawn',
-    side: 'black'
+  function w(desc: { type: FigureType }): IChessBoardFigureChildDescription & { type: FigureType } {
+    return {...desc, side: 'white'};
   }
   
+  const king: { type: FigureType } = {
+    type: 'king',
+  };
+  const pawn: { type: FigureType } = {
+    type: 'pawn'
+  }
+  const bishop: { type: FigureType } = {
+    type: 'bishop'
+  }
+  
+  
   return [
-    [null, null, null, wKing, null, null, null, null],
-    [wPawn, wPawn, wPawn, wPawn, wPawn, wPawn, wPawn, wPawn],
+    [null, null, w(bishop), w(king), null, w(bishop), null, null],
+    [w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn)],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
-    [bPawn, bPawn, bPawn, bPawn, bPawn, bPawn, bPawn, bPawn],
-    [null, null, null, bKing, null, null, null, null],
+    [b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn)],
+    [null, null, b(bishop), b(king), null, b(bishop), null, null],
   ];
 }
 
