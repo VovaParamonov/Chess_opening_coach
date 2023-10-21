@@ -14,7 +14,7 @@ export interface IChessBoardCell {
 
   getCurrentFigure(): IChessBoardFigure | null;
 
-  change(changes: Partial<IChessBoardCellDescriptor>): ChessBoardCell;
+  clone(changes?: Partial<IChessBoardCellDescriptor>): ChessBoardCell;
 
   toDescriptor(): IChessBoardCellDescriptor;
 
@@ -51,8 +51,8 @@ export default class ChessBoardCell implements IChessBoardCell {
 
   toDescriptor(): IChessBoardCellDescriptor {
     return {
-      coords: this._coords,
-      currentFigure: this._currentFigure,
+      coords: [...this._coords],
+      currentFigure: this._currentFigure?.clone(),
     };
   }
 
@@ -60,10 +60,10 @@ export default class ChessBoardCell implements IChessBoardCell {
     return this._coords[0] === coords[0] && this._coords[1] === coords[1];
   }
 
-  change(changes: Partial<IChessBoardCellDescriptor>): ChessBoardCell {
+  clone(changes?: Partial<IChessBoardCellDescriptor>): ChessBoardCell {
     return new ChessBoardCell({
       ...this.toDescriptor(),
-      ...changes,
+      ...(changes || {}),
     });
   }
 }

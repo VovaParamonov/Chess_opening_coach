@@ -1,6 +1,56 @@
 import { ChessBoardRows } from "@/model/ChessBoard/ChessBoard";
 import ChessBoardCell from "@/model/ChessBoard/ChessBoardCell/ChessBoardCell";
 
+function checkKingIsUnderAttack(
+  board: ChessBoardRows,
+  side: "white" | "black"
+) {
+  const kingCell: ChessBoardCell | null = null;
+
+  for (const row of board) {
+    for (const cell of row) {
+      const figure = cell.getCurrentFigure();
+      if (figure && figure.getType() === "king" && figure.getSide() === side) {
+        kingCell === cell;
+        break;
+      }
+      if (kingCell) {
+        break;
+      }
+    }
+  }
+
+  return board.some(row =>
+    row.some(cell => {
+      const figure = cell.getCurrentFigure();
+
+      let coords;
+      return (
+        figure && figure.getSide() !== side
+        // figure.canAttack(board, cell.getCoords(), coords)
+      );
+    })
+  );
+}
+
+function checkCellIsUnderAttack(
+  board: ChessBoardRows,
+  side: "white" | "black",
+  coords: [number, number]
+) {
+  return board.some(row =>
+    row.some(cell => {
+      const figure = cell.getCurrentFigure();
+
+      return (
+        figure &&
+        figure.getSide() !== side &&
+        figure.canAttack(board, cell.getCoords(), coords)
+      );
+    })
+  );
+}
+
 function checkFiguresBetweenCells(
   board: ChessBoardRows,
   startCoords: [number, number],
@@ -61,7 +111,9 @@ function checkFiguresBetweenCells(
   throw new Error(`Impossible cells coords for check figures [details above]`);
 }
 
-interface IChessBoardFigureDescriptor<Type extends FigureType = FigureType> {
+export interface IChessBoardFigureDescriptor<
+  Type extends FigureType = FigureType
+> {
   type: Type;
   side: "white" | "black";
   icon: string;
@@ -99,9 +151,11 @@ export interface IChessBoardFigure {
   ): boolean;
 
   getIcon(): string;
+
+  clone(changes?: Partial<IChessBoardFigureDescriptor>): ChessBoardFigure;
 }
 
-export default abstract class ChessBoardFigure implements IChessBoardFigure {
+abstract class ChessBoardFigure implements IChessBoardFigure {
   protected _type: FigureType;
   protected _side: "white" | "black";
   protected _icon: string;
@@ -197,6 +251,13 @@ export default abstract class ChessBoardFigure implements IChessBoardFigure {
 
     return new figureClass(descriptor);
   }
+
+  clone(changes?: Partial<IChessBoardFigureDescriptor>): ChessBoardFigure {
+    return ChessBoardFigure.spawnFigure(this._type, {
+      side: this._side,
+      ...changes,
+    });
+  }
 }
 
 type IChessBoardFigureChildDescription = Omit<
@@ -221,7 +282,8 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
     return (
       Math.abs(targetCoords[0] - startCoords[0]) <= 1 &&
       Math.abs(targetCoords[1] - startCoords[1]) <= 1 &&
-      board[targetCoords[0]][targetCoords[1]].isEmpty()
+      board[targetCoords[0]][targetCoords[1]].isEmpty() &&
+      !checkCellIsUnderAttack(board, this.getSide(), targetCoords)
     );
   }
 
@@ -233,6 +295,7 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
     return (
       Math.abs(targetCoords[0] - startCoords[0]) <= 1 &&
       Math.abs(targetCoords[1] - startCoords[1]) <= 1 &&
+      !checkFiguresBetweenCells(board, startCoords, targetCoords) &&
       this._isEnemyOnCell(board[targetCoords[0]][targetCoords[1]])
     );
   }
@@ -317,3 +380,5 @@ export const figuresMap = {
   queen: ChessBoardFigurePawn,
   knights: ChessBoardFigurePawn,
 };
+
+export default ChessBoardFigure;

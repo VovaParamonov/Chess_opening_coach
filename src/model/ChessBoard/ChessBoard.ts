@@ -27,7 +27,7 @@ export interface IChessBoard {
 
   getDeadFigures(): ChessBoardFigure[];
 
-  change(changes: Partial<IChessBoardDescriptor>): ChessBoard;
+  clone(changes: Partial<IChessBoardDescriptor>): ChessBoard;
 
   toDescriptor(): IChessBoardDescriptor;
 
@@ -56,12 +56,12 @@ export default class ChessBoard implements IChessBoard {
 
   toDescriptor(): IChessBoardDescriptor {
     return {
-      rows: this._rows,
-      deadFigures: this._deadFigures,
+      rows: this._rows.map(row => row.map(cell => cell.clone())),
+      deadFigures: this._deadFigures.map(f => f.clone()),
     };
   }
 
-  change(changes: Partial<IChessBoardDescriptor>): ChessBoard {
+  clone(changes: Partial<IChessBoardDescriptor>): ChessBoard {
     return new ChessBoard({
       ...this.toDescriptor(),
       ...changes,
@@ -93,14 +93,14 @@ export default class ChessBoard implements IChessBoard {
 
     const newRow = this._rows;
 
-    newRow[startCoords[0]][startCoords[1]] = startCell.change({
+    newRow[startCoords[0]][startCoords[1]] = startCell.clone({
       currentFigure: null,
     });
-    newRow[targetCoords[0]][targetCoords[1]] = targetCell.change({
+    newRow[targetCoords[0]][targetCoords[1]] = targetCell.clone({
       currentFigure: startCell.getCurrentFigure(),
     });
 
-    return this.change({
+    return this.clone({
       rows: newRow,
     });
   }
