@@ -90,7 +90,7 @@ export const ChessBoard = (props: IChessBoardProps) => {
   };
 
   return (
-    <BoardWrapper>
+    <BoardWrapper data-testid="chess-board">
       <ChessBoardStyled ref={boardRef}>
         {chessBoard
           .getRows()
@@ -98,7 +98,10 @@ export const ChessBoard = (props: IChessBoardProps) => {
             boardRow.map(cell => (
               <ChessBoardCell
                 key={`${cell.getCoords()[0]}${cell.getCoords()[1]}`}
-                visualEffect={checkMovableCell(cell)}
+                visualEffect={
+                  checkMovableCell(cell) ||
+                  (selectedFilledCell?.compare(cell) ? "selected" : undefined)
+                }
                 cell={cell}
                 onClick={handleCellClick}
               />

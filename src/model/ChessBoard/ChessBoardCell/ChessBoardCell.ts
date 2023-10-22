@@ -23,6 +23,8 @@ export interface IChessBoardCell {
   isOnCoords(coords: [number, number]): boolean;
 
   clear(): ChessBoardCell;
+
+  compare(cell: ChessBoardCell): boolean;
 }
 
 export default class ChessBoardCell implements IChessBoardCell {
@@ -36,8 +38,15 @@ export default class ChessBoardCell implements IChessBoardCell {
 
   clear() {
     return this.clone({
-      currentFigure: null
+      currentFigure: null,
     });
+  }
+
+  compare(cell: ChessBoardCell): boolean {
+    const coords = cell.getCoords();
+    const currentCoords = this.getCoords();
+
+    return coords[0] === currentCoords[0] && coords[1] === currentCoords[1];
   }
 
   getCoords() {
@@ -50,7 +59,7 @@ export default class ChessBoardCell implements IChessBoardCell {
 
   setCurrentFigure(currentFigure: ChessBoardFigure): ChessBoardCell {
     return this.clone({
-      currentFigure: currentFigure
+      currentFigure: currentFigure,
     });
   }
 

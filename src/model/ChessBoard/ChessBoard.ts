@@ -2,27 +2,33 @@ import ChessBoardCell from "./ChessBoardCell/ChessBoardCell";
 import ChessBoardFigure, {
   FigureType,
   IChessBoardFigureChildDescription,
-} from './ChessBoardFigure/ChessBoardFigure';
+} from "./ChessBoardFigure/ChessBoardFigure";
 
-function getChessBoardStartMap(): (IChessBoardFigureChildDescription & { type: FigureType } | null)[][] {
-  function b(desc: { type: FigureType }): IChessBoardFigureChildDescription & { type: FigureType } {
-    return {...desc, side: 'black'};
+export function getChessBoardStartMap(): (
+  | (IChessBoardFigureChildDescription & { type: FigureType })
+  | null
+)[][] {
+  function b(desc: {
+    type: FigureType;
+  }): IChessBoardFigureChildDescription & { type: FigureType } {
+    return { ...desc, side: "black" };
   }
-  function w(desc: { type: FigureType }): IChessBoardFigureChildDescription & { type: FigureType } {
-    return {...desc, side: 'white'};
+  function w(desc: {
+    type: FigureType;
+  }): IChessBoardFigureChildDescription & { type: FigureType } {
+    return { ...desc, side: "white" };
   }
-  
+
   const king: { type: FigureType } = {
-    type: 'king',
+    type: "king",
   };
   const pawn: { type: FigureType } = {
-    type: 'pawn'
-  }
+    type: "pawn",
+  };
   const bishop: { type: FigureType } = {
-    type: 'bishop'
-  }
-  
-  
+    type: "bishop",
+  };
+
   return [
     [null, null, w(bishop), w(king), null, w(bishop), null, null],
     [w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn)],
@@ -34,7 +40,6 @@ function getChessBoardStartMap(): (IChessBoardFigureChildDescription & { type: F
     [null, null, b(bishop), b(king), null, b(bishop), null, null],
   ];
 }
-
 
 export type ChessBoardRows = ChessBoardCell[][];
 
@@ -87,7 +92,7 @@ export default class ChessBoard implements IChessBoard {
     newRows[coords[0]][coords[1]] = newCell;
 
     return this.clone({
-      rows: newRows
+      rows: newRows,
     });
   }
 
@@ -134,12 +139,10 @@ export default class ChessBoard implements IChessBoard {
 
     const newRows = [...this.getRows()];
 
-    newRows[startCoords[0]][startCoords[1]] = startCell.clone({
-      currentFigure: null,
-    });
-    newRows[targetCoords[0]][targetCoords[1]] = targetCell.clone({
-      currentFigure: startCell.getCurrentFigure(),
-    });
+    newRows[startCoords[0]][startCoords[1]] = startCell.clear();
+    newRows[targetCoords[0]][targetCoords[1]] = targetCell.setCurrentFigure(
+      startCell.getCurrentFigure()!
+    );
 
     return this.clone({
       rows: newRows,
@@ -173,10 +176,7 @@ export default class ChessBoard implements IChessBoard {
       return null;
     }
 
-    const {
-      side,
-      type
-    } = initFigureDescription;
+    const { side, type } = initFigureDescription;
 
     return ChessBoardFigure.spawnFigure(type, { side });
   }

@@ -45,7 +45,7 @@ const CanAttackIcon = styled.div`
 interface IChessBoardCellProps {
   cell: ChessBoardCellModel;
   onClick: (cell: ChessBoardCellModel) => void;
-  visualEffect?: "canMove" | "canAttack";
+  visualEffect?: "canMove" | "canAttack" | "selected";
 }
 
 export const ChessBoardCell = (props: IChessBoardCellProps) => {
@@ -58,10 +58,19 @@ export const ChessBoardCell = (props: IChessBoardCellProps) => {
   const figure = cell.getCurrentFigure();
 
   return (
-    <ChessBoardCellStyled color={cell.getColor()} onClick={handleClick}>
+    <ChessBoardCellStyled
+      data-testid={cell.getCoords().join("-")}
+      color={cell.getColor()}
+      onClick={handleClick}
+    >
       {visualEffect === "canMove" ? <CanMoveIcon /> : null}
       {visualEffect === "canAttack" ? <CanAttackIcon /> : null}
-      {figure ? <ChessBoardFigure figure={figure} /> : null}
+      {figure ? (
+        <ChessBoardFigure
+          figure={figure}
+          selected={visualEffect === "selected"}
+        />
+      ) : null}
     </ChessBoardCellStyled>
   );
 };
