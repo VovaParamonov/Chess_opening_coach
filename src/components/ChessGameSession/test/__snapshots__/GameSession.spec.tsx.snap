@@ -21,13 +21,13 @@ exports[`Game core figures have right move patterns 3`] = `
           data-testid=\\"0-2\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            B
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 4`] = `
@@ -35,18 +35,20 @@ exports[`Game core figures have right move patterns 4`] = `
 - First value
 + Second value
 
-@@ -32,21 +32,25 @@
+@@ -35,11 +35,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"0-3\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            K
-          </div>
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -48,11 +48,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -69,7 +71,7 @@ exports[`Game core figures have right move patterns 5`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -82,10 +84,13 @@ exports[`Game core figures have right move patterns 5`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -105,7 +110,7 @@ exports[`Game core figures have right move patterns 6`] = `
 - First value
 + Second value
 
-@@ -30,30 +30,30 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -118,10 +123,13 @@ exports[`Game core figures have right move patterns 6`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,22 +49,17 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -135,13 +143,13 @@ exports[`Game core figures have right move patterns 6`] = `
           data-testid=\\"0-5\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            B
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 7`] = `
@@ -149,7 +157,7 @@ exports[`Game core figures have right move patterns 7`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -162,10 +170,13 @@ exports[`Game core figures have right move patterns 7`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -185,7 +196,7 @@ exports[`Game core figures have right move patterns 8`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -198,10 +209,13 @@ exports[`Game core figures have right move patterns 8`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -221,7 +235,7 @@ exports[`Game core figures have right move patterns 9`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -234,10 +248,13 @@ exports[`Game core figures have right move patterns 9`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -250,20 +267,20 @@ exports[`Game core figures have right move patterns 9`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -71,11 +71,11 @@
+@@ -80,11 +80,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"1-0\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -165,11 +165,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -198,11 +198,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -279,7 +296,7 @@ exports[`Game core figures have right move patterns 9`] = `
           color=\\"white\\"
           data-testid=\\"2-1\\"
         />
-@@ -205,11 +209,15 @@
+@@ -238,11 +242,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -302,7 +319,7 @@ exports[`Game core figures have right move patterns 10`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -315,10 +332,13 @@ exports[`Game core figures have right move patterns 10`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -331,20 +351,20 @@ exports[`Game core figures have right move patterns 10`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -83,11 +83,11 @@
+@@ -95,11 +95,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"1-1\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -170,11 +170,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -203,11 +203,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -360,7 +380,7 @@ exports[`Game core figures have right move patterns 10`] = `
           color=\\"black\\"
           data-testid=\\"2-2\\"
         />
-@@ -210,11 +214,15 @@
+@@ -243,11 +247,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -383,7 +403,7 @@ exports[`Game core figures have right move patterns 11`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -396,10 +416,13 @@ exports[`Game core figures have right move patterns 11`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -412,20 +435,20 @@ exports[`Game core figures have right move patterns 11`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -95,11 +95,11 @@
+@@ -110,11 +110,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"1-2\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -175,11 +175,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -208,11 +208,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -441,7 +464,7 @@ exports[`Game core figures have right move patterns 11`] = `
           color=\\"white\\"
           data-testid=\\"2-3\\"
         />
-@@ -215,11 +219,15 @@
+@@ -248,11 +252,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -464,7 +487,7 @@ exports[`Game core figures have right move patterns 12`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -477,10 +500,13 @@ exports[`Game core figures have right move patterns 12`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -493,20 +519,20 @@ exports[`Game core figures have right move patterns 12`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -107,11 +107,11 @@
+@@ -125,11 +125,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"1-3\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -180,11 +180,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -213,11 +213,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -522,7 +548,7 @@ exports[`Game core figures have right move patterns 12`] = `
           color=\\"black\\"
           data-testid=\\"2-4\\"
         />
-@@ -220,11 +224,15 @@
+@@ -253,11 +257,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -545,7 +571,7 @@ exports[`Game core figures have right move patterns 13`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -558,10 +584,13 @@ exports[`Game core figures have right move patterns 13`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -574,20 +603,20 @@ exports[`Game core figures have right move patterns 13`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -119,11 +119,11 @@
+@@ -140,11 +140,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"1-4\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -185,11 +185,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -218,11 +218,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -603,7 +632,7 @@ exports[`Game core figures have right move patterns 13`] = `
           color=\\"white\\"
           data-testid=\\"2-5\\"
         />
-@@ -225,11 +229,15 @@
+@@ -258,11 +262,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -626,7 +655,7 @@ exports[`Game core figures have right move patterns 14`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -639,10 +668,13 @@ exports[`Game core figures have right move patterns 14`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -655,20 +687,20 @@ exports[`Game core figures have right move patterns 14`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -131,11 +131,11 @@
+@@ -155,11 +155,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"1-5\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -190,11 +190,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -223,11 +223,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -684,7 +716,7 @@ exports[`Game core figures have right move patterns 14`] = `
           color=\\"black\\"
           data-testid=\\"2-6\\"
         />
-@@ -230,11 +234,15 @@
+@@ -263,11 +267,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -707,7 +739,7 @@ exports[`Game core figures have right move patterns 15`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -720,10 +752,13 @@ exports[`Game core figures have right move patterns 15`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -736,20 +771,20 @@ exports[`Game core figures have right move patterns 15`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -143,11 +143,11 @@
+@@ -170,11 +170,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"1-6\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -195,11 +195,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -228,11 +228,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -765,7 +800,7 @@ exports[`Game core figures have right move patterns 15`] = `
           color=\\"white\\"
           data-testid=\\"2-7\\"
         />
-@@ -235,11 +239,15 @@
+@@ -268,11 +272,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -788,7 +823,7 @@ exports[`Game core figures have right move patterns 16`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -801,10 +836,13 @@ exports[`Game core figures have right move patterns 16`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -817,20 +855,20 @@ exports[`Game core figures have right move patterns 16`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -155,11 +155,11 @@
+@@ -185,11 +185,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"1-7\\"
         >
           <div
--           class=\\"sc-bdnyFh kKdZfs\\"
-+           class=\\"sc-bdnyFh itvPoW\\"
+-           class=\\"sc-bdnyFh leaQvT\\"
++           class=\\"sc-bdnyFh jcZexO\\"
             side=\\"white\\"
           >
-            P
-          </div>
-        </div>
-@@ -200,11 +200,15 @@
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -233,11 +233,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -846,7 +884,7 @@ exports[`Game core figures have right move patterns 16`] = `
           color=\\"white\\"
           data-testid=\\"3-0\\"
         />
-@@ -240,11 +244,15 @@
+@@ -273,11 +277,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -869,7 +907,7 @@ exports[`Game core figures have right move patterns 17`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -882,10 +920,13 @@ exports[`Game core figures have right move patterns 17`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -905,7 +946,7 @@ exports[`Game core figures have right move patterns 18`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -918,10 +959,13 @@ exports[`Game core figures have right move patterns 18`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -941,7 +985,7 @@ exports[`Game core figures have right move patterns 19`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -954,10 +998,13 @@ exports[`Game core figures have right move patterns 19`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -977,7 +1024,7 @@ exports[`Game core figures have right move patterns 20`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -990,10 +1037,13 @@ exports[`Game core figures have right move patterns 20`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1013,7 +1063,7 @@ exports[`Game core figures have right move patterns 21`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1026,10 +1076,13 @@ exports[`Game core figures have right move patterns 21`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1049,7 +1102,7 @@ exports[`Game core figures have right move patterns 22`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1062,10 +1115,13 @@ exports[`Game core figures have right move patterns 22`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1085,7 +1141,7 @@ exports[`Game core figures have right move patterns 23`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1098,10 +1154,13 @@ exports[`Game core figures have right move patterns 23`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1121,7 +1180,7 @@ exports[`Game core figures have right move patterns 24`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1134,10 +1193,13 @@ exports[`Game core figures have right move patterns 24`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1157,7 +1219,7 @@ exports[`Game core figures have right move patterns 25`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1170,10 +1232,13 @@ exports[`Game core figures have right move patterns 25`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1193,7 +1258,7 @@ exports[`Game core figures have right move patterns 26`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1206,10 +1271,13 @@ exports[`Game core figures have right move patterns 26`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1229,7 +1297,7 @@ exports[`Game core figures have right move patterns 27`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1242,10 +1310,13 @@ exports[`Game core figures have right move patterns 27`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1265,7 +1336,7 @@ exports[`Game core figures have right move patterns 28`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1278,10 +1349,13 @@ exports[`Game core figures have right move patterns 28`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1301,7 +1375,7 @@ exports[`Game core figures have right move patterns 29`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1314,10 +1388,13 @@ exports[`Game core figures have right move patterns 29`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1337,7 +1414,7 @@ exports[`Game core figures have right move patterns 30`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1350,10 +1427,13 @@ exports[`Game core figures have right move patterns 30`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1373,7 +1453,7 @@ exports[`Game core figures have right move patterns 31`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1386,10 +1466,13 @@ exports[`Game core figures have right move patterns 31`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1409,7 +1492,7 @@ exports[`Game core figures have right move patterns 32`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1422,10 +1505,13 @@ exports[`Game core figures have right move patterns 32`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1445,7 +1531,7 @@ exports[`Game core figures have right move patterns 33`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1458,10 +1544,13 @@ exports[`Game core figures have right move patterns 33`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1481,7 +1570,7 @@ exports[`Game core figures have right move patterns 34`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1494,10 +1583,13 @@ exports[`Game core figures have right move patterns 34`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1517,7 +1609,7 @@ exports[`Game core figures have right move patterns 35`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1530,10 +1622,13 @@ exports[`Game core figures have right move patterns 35`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1553,7 +1648,7 @@ exports[`Game core figures have right move patterns 36`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1566,10 +1661,13 @@ exports[`Game core figures have right move patterns 36`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1589,7 +1687,7 @@ exports[`Game core figures have right move patterns 37`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1602,10 +1700,13 @@ exports[`Game core figures have right move patterns 37`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1625,7 +1726,7 @@ exports[`Game core figures have right move patterns 38`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1638,10 +1739,13 @@ exports[`Game core figures have right move patterns 38`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1661,7 +1765,7 @@ exports[`Game core figures have right move patterns 39`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1674,10 +1778,13 @@ exports[`Game core figures have right move patterns 39`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1697,7 +1804,7 @@ exports[`Game core figures have right move patterns 40`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1710,10 +1817,13 @@ exports[`Game core figures have right move patterns 40`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1733,7 +1843,7 @@ exports[`Game core figures have right move patterns 41`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1746,10 +1856,13 @@ exports[`Game core figures have right move patterns 41`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1769,7 +1882,7 @@ exports[`Game core figures have right move patterns 42`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1782,10 +1895,13 @@ exports[`Game core figures have right move patterns 42`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1805,7 +1921,7 @@ exports[`Game core figures have right move patterns 43`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1818,10 +1934,13 @@ exports[`Game core figures have right move patterns 43`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1841,7 +1960,7 @@ exports[`Game core figures have right move patterns 44`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1854,10 +1973,13 @@ exports[`Game core figures have right move patterns 44`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1877,7 +1999,7 @@ exports[`Game core figures have right move patterns 45`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1890,10 +2012,13 @@ exports[`Game core figures have right move patterns 45`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1913,7 +2038,7 @@ exports[`Game core figures have right move patterns 46`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1926,10 +2051,13 @@ exports[`Game core figures have right move patterns 46`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1949,7 +2077,7 @@ exports[`Game core figures have right move patterns 47`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1962,10 +2090,13 @@ exports[`Game core figures have right move patterns 47`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -1985,7 +2116,7 @@ exports[`Game core figures have right move patterns 48`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -1998,10 +2129,13 @@ exports[`Game core figures have right move patterns 48`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2021,7 +2155,7 @@ exports[`Game core figures have right move patterns 49`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2034,10 +2168,13 @@ exports[`Game core figures have right move patterns 49`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2050,7 +2187,7 @@ exports[`Game core figures have right move patterns 49`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -245,11 +245,15 @@
+@@ -278,11 +278,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2066,7 +2203,7 @@ exports[`Game core figures have right move patterns 49`] = `
           color=\\"white\\"
           data-testid=\\"4-1\\"
         />
-@@ -285,11 +289,15 @@
+@@ -318,11 +322,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2082,19 +2219,19 @@ exports[`Game core figures have right move patterns 49`] = `
           color=\\"black\\"
           data-testid=\\"5-1\\"
         />
-@@ -327,11 +335,11 @@
+@@ -360,11 +368,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"6-0\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 50`] = `
@@ -2102,7 +2239,7 @@ exports[`Game core figures have right move patterns 50`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2115,10 +2252,13 @@ exports[`Game core figures have right move patterns 50`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2131,7 +2271,7 @@ exports[`Game core figures have right move patterns 50`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -250,11 +250,15 @@
+@@ -283,11 +283,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2147,7 +2287,7 @@ exports[`Game core figures have right move patterns 50`] = `
           color=\\"black\\"
           data-testid=\\"4-2\\"
         />
-@@ -290,11 +294,15 @@
+@@ -323,11 +327,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2163,19 +2303,19 @@ exports[`Game core figures have right move patterns 50`] = `
           color=\\"white\\"
           data-testid=\\"5-2\\"
         />
-@@ -339,11 +347,11 @@
+@@ -375,11 +383,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"6-1\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 51`] = `
@@ -2183,7 +2323,7 @@ exports[`Game core figures have right move patterns 51`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2196,10 +2336,13 @@ exports[`Game core figures have right move patterns 51`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2212,7 +2355,7 @@ exports[`Game core figures have right move patterns 51`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -255,11 +255,15 @@
+@@ -288,11 +288,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2228,7 +2371,7 @@ exports[`Game core figures have right move patterns 51`] = `
           color=\\"white\\"
           data-testid=\\"4-3\\"
         />
-@@ -295,11 +299,15 @@
+@@ -328,11 +332,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2244,19 +2387,19 @@ exports[`Game core figures have right move patterns 51`] = `
           color=\\"black\\"
           data-testid=\\"5-3\\"
         />
-@@ -351,11 +359,11 @@
+@@ -390,11 +398,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"6-2\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 52`] = `
@@ -2264,7 +2407,7 @@ exports[`Game core figures have right move patterns 52`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2277,10 +2420,13 @@ exports[`Game core figures have right move patterns 52`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2293,7 +2439,7 @@ exports[`Game core figures have right move patterns 52`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -260,11 +260,15 @@
+@@ -293,11 +293,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2309,7 +2455,7 @@ exports[`Game core figures have right move patterns 52`] = `
           color=\\"black\\"
           data-testid=\\"4-4\\"
         />
-@@ -300,11 +304,15 @@
+@@ -333,11 +337,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2325,19 +2471,19 @@ exports[`Game core figures have right move patterns 52`] = `
           color=\\"white\\"
           data-testid=\\"5-4\\"
         />
-@@ -363,11 +371,11 @@
+@@ -405,11 +413,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"6-3\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 53`] = `
@@ -2345,7 +2491,7 @@ exports[`Game core figures have right move patterns 53`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2358,10 +2504,13 @@ exports[`Game core figures have right move patterns 53`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2374,7 +2523,7 @@ exports[`Game core figures have right move patterns 53`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -265,11 +265,15 @@
+@@ -298,11 +298,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2390,7 +2539,7 @@ exports[`Game core figures have right move patterns 53`] = `
           color=\\"white\\"
           data-testid=\\"4-5\\"
         />
-@@ -305,11 +309,15 @@
+@@ -338,11 +342,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2406,19 +2555,19 @@ exports[`Game core figures have right move patterns 53`] = `
           color=\\"black\\"
           data-testid=\\"5-5\\"
         />
-@@ -375,11 +383,11 @@
+@@ -420,11 +428,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"6-4\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 54`] = `
@@ -2426,7 +2575,7 @@ exports[`Game core figures have right move patterns 54`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2439,10 +2588,13 @@ exports[`Game core figures have right move patterns 54`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2455,7 +2607,7 @@ exports[`Game core figures have right move patterns 54`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -270,11 +270,15 @@
+@@ -303,11 +303,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2471,7 +2623,7 @@ exports[`Game core figures have right move patterns 54`] = `
           color=\\"black\\"
           data-testid=\\"4-6\\"
         />
-@@ -310,11 +314,15 @@
+@@ -343,11 +347,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2487,19 +2639,19 @@ exports[`Game core figures have right move patterns 54`] = `
           color=\\"white\\"
           data-testid=\\"5-6\\"
         />
-@@ -387,11 +395,11 @@
+@@ -435,11 +443,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"6-5\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 55`] = `
@@ -2507,7 +2659,7 @@ exports[`Game core figures have right move patterns 55`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2520,10 +2672,13 @@ exports[`Game core figures have right move patterns 55`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2536,7 +2691,7 @@ exports[`Game core figures have right move patterns 55`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -275,11 +275,15 @@
+@@ -308,11 +308,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2552,7 +2707,7 @@ exports[`Game core figures have right move patterns 55`] = `
           color=\\"white\\"
           data-testid=\\"4-7\\"
         />
-@@ -315,11 +319,15 @@
+@@ -348,11 +352,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2568,19 +2723,19 @@ exports[`Game core figures have right move patterns 55`] = `
           color=\\"black\\"
           data-testid=\\"5-7\\"
         />
-@@ -399,11 +407,11 @@
+@@ -450,11 +458,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"6-6\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 56`] = `
@@ -2588,7 +2743,7 @@ exports[`Game core figures have right move patterns 56`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2601,10 +2756,13 @@ exports[`Game core figures have right move patterns 56`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2617,7 +2775,7 @@ exports[`Game core figures have right move patterns 56`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -280,11 +280,15 @@
+@@ -313,11 +313,15 @@
         />
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2633,7 +2791,7 @@ exports[`Game core figures have right move patterns 56`] = `
           color=\\"white\\"
           data-testid=\\"5-0\\"
         />
-@@ -320,11 +324,15 @@
+@@ -353,11 +357,15 @@
         />
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2649,19 +2807,19 @@ exports[`Game core figures have right move patterns 56`] = `
           color=\\"black\\"
           data-testid=\\"6-0\\"
         >
-@@ -411,11 +419,11 @@
+@@ -465,11 +473,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"6-7\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            P
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 57`] = `
@@ -2669,7 +2827,7 @@ exports[`Game core figures have right move patterns 57`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2682,10 +2840,13 @@ exports[`Game core figures have right move patterns 57`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2705,7 +2866,7 @@ exports[`Game core figures have right move patterns 58`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2718,10 +2879,13 @@ exports[`Game core figures have right move patterns 58`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2741,7 +2905,7 @@ exports[`Game core figures have right move patterns 59`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2754,10 +2918,13 @@ exports[`Game core figures have right move patterns 59`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2770,19 +2937,19 @@ exports[`Game core figures have right move patterns 59`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -433,11 +433,11 @@
+@@ -490,11 +490,11 @@
           class=\\"sc-gtsqUy jhSroJ\\"
           color=\\"white\\"
           data-testid=\\"7-2\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            B
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 60`] = `
@@ -2790,7 +2957,7 @@ exports[`Game core figures have right move patterns 60`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2803,10 +2970,13 @@ exports[`Game core figures have right move patterns 60`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2819,18 +2989,20 @@ exports[`Game core figures have right move patterns 60`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -445,21 +445,25 @@
+@@ -505,11 +505,11 @@
           class=\\"sc-gtsqUy cKTvcv\\"
           color=\\"black\\"
           data-testid=\\"7-3\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            K
-          </div>
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+@@ -518,11 +518,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2853,7 +3025,7 @@ exports[`Game core figures have right move patterns 61`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2866,10 +3038,13 @@ exports[`Game core figures have right move patterns 61`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2882,7 +3057,7 @@ exports[`Game core figures have right move patterns 61`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -443,23 +443,23 @@
+@@ -503,10 +503,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2895,10 +3070,13 @@ exports[`Game core figures have right move patterns 61`] = `
 +         data-testid=\\"7-4\\"
         >
           <div
-            class=\\"sc-bdnyFh klihbc\\"
+            class=\\"sc-bdnyFh iFMPlL\\"
             side=\\"black\\"
           >
-            K
+@@ -514,15 +519,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2918,7 +3096,7 @@ exports[`Game core figures have right move patterns 62`] = `
 - First value
 + Second value
 
-@@ -30,24 +30,24 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -2931,10 +3109,12 @@ exports[`Game core figures have right move patterns 62`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -45,15 +50,10 @@
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
         <div
@@ -2948,7 +3128,7 @@ exports[`Game core figures have right move patterns 62`] = `
           data-testid=\\"0-5\\"
         >
           <div
-@@ -443,30 +443,30 @@
+@@ -503,10 +503,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -2961,10 +3141,13 @@ exports[`Game core figures have right move patterns 62`] = `
 +         data-testid=\\"7-4\\"
         >
           <div
-            class=\\"sc-bdnyFh klihbc\\"
+            class=\\"sc-bdnyFh iFMPlL\\"
             side=\\"black\\"
           >
-            K
+@@ -514,22 +519,17 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -2978,13 +3161,13 @@ exports[`Game core figures have right move patterns 62`] = `
           data-testid=\\"7-5\\"
         >
           <div
--           class=\\"sc-bdnyFh klihbc\\"
-+           class=\\"sc-bdnyFh bHrsje\\"
+-           class=\\"sc-bdnyFh iFMPlL\\"
++           class=\\"sc-bdnyFh gAkUhO\\"
             side=\\"black\\"
           >
-            B
-          </div>
-        </div>"
+            <img
+              alt=\\"\\"
+              src=\\"test-file-stub\\""
 `;
 
 exports[`Game core figures have right move patterns 63`] = `
@@ -2992,7 +3175,7 @@ exports[`Game core figures have right move patterns 63`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -3005,10 +3188,13 @@ exports[`Game core figures have right move patterns 63`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -3021,7 +3207,7 @@ exports[`Game core figures have right move patterns 63`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -443,23 +443,23 @@
+@@ -503,10 +503,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -3034,10 +3220,13 @@ exports[`Game core figures have right move patterns 63`] = `
 +         data-testid=\\"7-4\\"
         >
           <div
-            class=\\"sc-bdnyFh klihbc\\"
+            class=\\"sc-bdnyFh iFMPlL\\"
             side=\\"black\\"
           >
-            K
+@@ -514,15 +519,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -3057,7 +3246,7 @@ exports[`Game core figures have right move patterns 64`] = `
 - First value
 + Second value
 
-@@ -30,23 +30,23 @@
+@@ -33,10 +33,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy jhSroJ\\"
@@ -3070,10 +3259,13 @@ exports[`Game core figures have right move patterns 64`] = `
 +         data-testid=\\"0-4\\"
         >
           <div
-            class=\\"sc-bdnyFh kKdZfs\\"
+            class=\\"sc-bdnyFh leaQvT\\"
             side=\\"white\\"
           >
-            K
+@@ -44,15 +49,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -3086,7 +3278,7 @@ exports[`Game core figures have right move patterns 64`] = `
           color=\\"white\\"
           data-testid=\\"0-5\\"
         >
-@@ -443,23 +443,23 @@
+@@ -503,10 +503,15 @@
         </div>
         <div
           class=\\"sc-gtsqUy cKTvcv\\"
@@ -3099,10 +3291,13 @@ exports[`Game core figures have right move patterns 64`] = `
 +         data-testid=\\"7-4\\"
         >
           <div
-            class=\\"sc-bdnyFh klihbc\\"
+            class=\\"sc-bdnyFh iFMPlL\\"
             side=\\"black\\"
           >
-            K
+@@ -514,15 +519,10 @@
+              alt=\\"\\"
+              src=\\"test-file-stub\\"
+            />
           </div>
         </div>
 -       <div
@@ -3142,10 +3337,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="0-2"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          B
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3154,10 +3352,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="0-3"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          K
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3171,10 +3372,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="0-5"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          B
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3193,10 +3397,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-0"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3205,10 +3412,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-1"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3217,10 +3427,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-2"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3229,10 +3442,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-3"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3241,10 +3457,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-4"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3253,10 +3472,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-5"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3265,10 +3487,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-6"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3277,10 +3502,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="1-7"
       >
         <div
-          class="sc-bdnyFh kKdZfs"
+          class="sc-bdnyFh leaQvT"
           side="white"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3449,10 +3677,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-0"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3461,10 +3692,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-1"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3473,10 +3707,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-2"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3485,10 +3722,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-3"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3497,10 +3737,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-4"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3509,10 +3752,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-5"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3521,10 +3767,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-6"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3533,10 +3782,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="6-7"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          P
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3555,10 +3807,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="7-2"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          B
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3567,10 +3822,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="7-3"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          K
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div
@@ -3584,10 +3842,13 @@ exports[`Game core should render board with start positions 1`] = `
         data-testid="7-5"
       >
         <div
-          class="sc-bdnyFh klihbc"
+          class="sc-bdnyFh iFMPlL"
           side="black"
         >
-          B
+          <img
+            alt=""
+            src="test-file-stub"
+          />
         </div>
       </div>
       <div

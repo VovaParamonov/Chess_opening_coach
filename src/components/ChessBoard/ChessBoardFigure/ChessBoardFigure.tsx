@@ -10,8 +10,9 @@ interface IChessBoardFigureStyledProps {
 
 const ChessBoardFigureStyled = styled.div<IChessBoardFigureStyledProps>`
   color: ${props => props.side};
-  text-shadow: ${props => (props.selected ? "0 0 5px #3a3a3a" : "unset")};
-  transform: ${props => (props.selected ? "scale(1.4)" : "unset")};
+
+  filter: ${props =>
+    props.selected ? "drop-shadow(0 0 0.75rem #c9c9c9)" : "unset"};
 `;
 
 interface IChessBoardFigureProps {
@@ -24,7 +25,7 @@ export const ChessBoardFigure = (props: IChessBoardFigureProps) => {
 
   return (
     <ChessBoardFigureStyled side={figure.getSide()} selected={selected}>
-      {figure.getIcon()}
+      <img src={figure.getIcon()} alt="" />
     </ChessBoardFigureStyled>
   );
 };

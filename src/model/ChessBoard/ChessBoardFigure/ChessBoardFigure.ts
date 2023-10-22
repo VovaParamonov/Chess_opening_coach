@@ -1,5 +1,6 @@
 import ChessBoard from "@/model/ChessBoard/ChessBoard";
 import ChessBoardCell from "@/model/ChessBoard/ChessBoardCell/ChessBoardCell";
+import { iconMap } from "@/model/ChessBoard/ChessBoardFigure/figureIcons";
 
 function checkKingIsUnderAttack(board: ChessBoard, side: "white" | "black") {
   const boardRows = board.getRows();
@@ -122,7 +123,6 @@ export interface IChessBoardFigureDescriptor<
 > {
   type: Type;
   side: "white" | "black";
-  icon: string;
 }
 
 export type FigureType =
@@ -166,12 +166,10 @@ export interface IChessBoardFigure {
 abstract class ChessBoardFigure implements IChessBoardFigure {
   protected _type: FigureType;
   protected _side: "white" | "black";
-  protected _icon: string;
 
   protected constructor(descriptor: IChessBoardFigureDescriptor) {
     this._type = descriptor.type;
     this._side = descriptor.side;
-    this._icon = descriptor.icon;
   }
 
   compare(figure: ChessBoardFigure): boolean {
@@ -195,7 +193,6 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
     return {
       type: this._type,
       side: this._side,
-      icon: this._icon,
     };
   }
 
@@ -204,7 +201,7 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
   }
 
   getIcon(): string {
-    return this._icon;
+    return iconMap[`${this._type}_${this._side[0]}` as keyof typeof iconMap];
   }
 
   getType(): FigureType {
@@ -297,7 +294,7 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
 
 export type IChessBoardFigureChildDescription = Omit<
   IChessBoardFigureDescriptor,
-  "type" | "icon"
+  "type"
 >;
 
 export class ChessBoardFigureKing extends ChessBoardFigure {
@@ -305,7 +302,6 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
     super({
       ...descriptor,
       type: "king",
-      icon: "K",
     });
   }
 
@@ -340,7 +336,6 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
     super({
       ...descriptor,
       type: "pawn",
-      icon: "P",
     });
   }
 
@@ -411,7 +406,6 @@ class ChessBoardFigureBishop extends ChessBoardFigure {
     super({
       type: "bishop",
       ...description,
-      icon: "B",
     });
   }
 
