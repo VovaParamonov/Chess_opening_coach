@@ -130,7 +130,7 @@ export type FigureType =
   | "queen"
   | "rook"
   | "bishop"
-  | "knights"
+  | "knight"
   | "pawn";
 
 export interface IChessBoardFigure {
@@ -283,9 +283,9 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
     descriptor: IChessBoardFigureChildDescription
   ): ChessBoardFigureQueen;
   static spawnFigure(
-    type: "knights",
+    type: "knight",
     descriptor: IChessBoardFigureChildDescription
-  ): ChessBoardFigurePawn;
+  ): ChessBoardFigureKnight;
   static spawnFigure(
     type: FigureType,
     descriptor: IChessBoardFigureChildDescription
@@ -416,7 +416,7 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
 
   turnInto(type: Exclude<FigureType, "pawn" | "king">) {
     switch (type) {
-      case "knights":
+      case "knight":
         return ChessBoardFigure.spawnFigure(type, this.toDescriptor());
       case "bishop":
         return ChessBoardFigure.spawnFigure(type, this.toDescriptor());
@@ -575,13 +575,63 @@ class ChessBoardFigureRook extends ChessBoardFigure {
   }
 }
 
+class ChessBoardFigureKnight extends ChessBoardFigure {
+  constructor(description: IChessBoardFigureChildDescription) {
+    super({
+      type: "knight",
+      ...description,
+    });
+  }
+
+  checkMovePattern(
+    startCoords: [number, number],
+    targetCoords: [number, number]
+  ) {
+    const yDiff = targetCoords[1] - startCoords[1];
+    const xDiff = targetCoords[0] - startCoords[0];
+
+    return (
+      (Math.abs(xDiff) == 2 && Math.abs(yDiff) === 1) ||
+      (Math.abs(xDiff) == 1 && Math.abs(yDiff) === 2)
+    );
+  }
+
+  canMove(
+    board: ChessBoard,
+    startCoords: [number, number],
+    targetCoords: [number, number]
+  ): boolean {
+    return (
+      this.checkMovePattern(startCoords, targetCoords) &&
+      super.canMove(board, startCoords, targetCoords)
+    );
+  }
+
+  canAttack(
+    board: ChessBoard,
+    startCoords: [number, number],
+    targetCoords: [number, number],
+    ignoreKingUnderAttackChecking?: true
+  ): boolean {
+    return (
+      this.checkMovePattern(startCoords, targetCoords) &&
+      super.canAttack(
+        board,
+        startCoords,
+        targetCoords,
+        ignoreKingUnderAttackChecking
+      )
+    );
+  }
+}
+
 export const figuresMap = {
   king: ChessBoardFigureKing,
   pawn: ChessBoardFigurePawn,
   bishop: ChessBoardFigureBishop,
   rook: ChessBoardFigureRook,
   queen: ChessBoardFigureQueen,
-  knights: ChessBoardFigurePawn,
+  knight: ChessBoardFigureKnight,
 };
 
 export default ChessBoardFigure;
