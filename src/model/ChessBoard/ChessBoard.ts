@@ -28,16 +28,19 @@ export function getChessBoardStartMap(): (
   const bishop: { type: FigureType } = {
     type: "bishop",
   };
+  const queen: { type: FigureType } = {
+    type: "queen",
+  };
 
   return [
-    [null, null, w(bishop), w(king), null, w(bishop), null, null],
+    [null, null, w(bishop), w(king), w(queen), w(bishop), null, null],
     [w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn)],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn)],
-    [null, null, b(bishop), b(king), null, b(bishop), null, null],
+    [null, null, b(bishop), b(king), b(queen), b(bishop), null, null],
   ];
 }
 
@@ -97,7 +100,7 @@ export default class ChessBoard implements IChessBoard {
   }
 
   getRows(): ChessBoardRows {
-    return [...this._rows];
+    return this._rows.map(row => [...row]);
   }
 
   toDescriptor(): IChessBoardDescriptor {
@@ -118,15 +121,11 @@ export default class ChessBoard implements IChessBoard {
     startCoords: [number, number],
     targetCoords: [number, number]
   ): ChessBoard {
-    const startCell = this.getCell(startCoords);
-    const targetCell = this.getCell(targetCoords);
+    const startCell = this.getCell(startCoords).clone();
+    const targetCell = this.getCell(targetCoords).clone();
 
     if (startCell.isEmpty()) {
       throw new Error("There's no figure at start cell");
-    }
-
-    if (targetCell.getCurrentFigure()?.getType() === "king") {
-      throw new Error("You can't attack king");
     }
 
     if (
