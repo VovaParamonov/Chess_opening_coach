@@ -31,16 +31,19 @@ export function getChessBoardStartMap(): (
   const queen: { type: FigureType } = {
     type: "queen",
   };
+  const rook: { type: FigureType } = {
+    type: "rook",
+  };
 
   return [
-    [null, null, w(bishop), w(king), w(queen), w(bishop), null, null],
+    [w(rook), null, w(bishop), w(king), w(queen), w(bishop), null, w(rook)],
     [w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn), w(pawn)],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn), b(pawn)],
-    [null, null, b(bishop), b(king), b(queen), b(bishop), null, null],
+    [b(rook), null, b(bishop), b(king), b(queen), b(bishop), null, b(rook)],
   ];
 }
 

@@ -277,7 +277,7 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
   static spawnFigure(
     type: "rook",
     descriptor: IChessBoardFigureChildDescription
-  ): ChessBoardFigurePawn;
+  ): ChessBoardFigureRook;
   static spawnFigure(
     type: "queen",
     descriptor: IChessBoardFigureChildDescription
@@ -526,11 +526,60 @@ class ChessBoardFigureQueen extends ChessBoardFigure {
   }
 }
 
+class ChessBoardFigureRook extends ChessBoardFigure {
+  constructor(description: IChessBoardFigureChildDescription) {
+    super({
+      type: "rook",
+      ...description,
+    });
+  }
+
+  checkMovePattern(
+    startCoords: [number, number],
+    targetCoords: [number, number]
+  ) {
+    const yDiff = targetCoords[1] - startCoords[1];
+    const xDiff = targetCoords[0] - startCoords[0];
+
+    return (xDiff !== 0 && yDiff === 0) || (yDiff !== 0 && xDiff === 0);
+  }
+
+  canMove(
+    board: ChessBoard,
+    startCoords: [number, number],
+    targetCoords: [number, number]
+  ): boolean {
+    return (
+      this.checkMovePattern(startCoords, targetCoords) &&
+      !checkFiguresBetweenCells(board, startCoords, targetCoords) &&
+      super.canMove(board, startCoords, targetCoords)
+    );
+  }
+
+  canAttack(
+    board: ChessBoard,
+    startCoords: [number, number],
+    targetCoords: [number, number],
+    ignoreKingUnderAttackChecking?: true
+  ): boolean {
+    return (
+      this.checkMovePattern(startCoords, targetCoords) &&
+      !checkFiguresBetweenCells(board, startCoords, targetCoords) &&
+      super.canAttack(
+        board,
+        startCoords,
+        targetCoords,
+        ignoreKingUnderAttackChecking
+      )
+    );
+  }
+}
+
 export const figuresMap = {
   king: ChessBoardFigureKing,
   pawn: ChessBoardFigurePawn,
   bishop: ChessBoardFigureBishop,
-  rook: ChessBoardFigurePawn,
+  rook: ChessBoardFigureRook,
   queen: ChessBoardFigureQueen,
   knights: ChessBoardFigurePawn,
 };
