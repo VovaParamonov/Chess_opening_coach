@@ -1,8 +1,9 @@
 import ChessBoard from "@/model/ChessBoard/ChessBoard";
 import ChessBoardCell from "@/model/ChessBoard/ChessBoardCell/ChessBoardCell";
 import { iconMap } from "@/model/ChessBoard/ChessBoardFigure/figureIcons";
+import { Coords, Side } from "@/model/ChessCore/ChessCore";
 
-function checkKingIsUnderAttack(board: ChessBoard, side: "white" | "black") {
+function checkKingIsUnderAttack(board: ChessBoard, side: Side) {
   const boardRows = board.getRows();
   let kingCell: ChessBoardCell | null = null;
 
@@ -34,8 +35,8 @@ function checkKingIsUnderAttack(board: ChessBoard, side: "white" | "black") {
 
 function checkCellIsUnderAttack(
   board: ChessBoard,
-  side: "white" | "black",
-  coords: [number, number]
+  side: Side,
+  coords: Coords
 ) {
   const boardRows = board.getRows();
 
@@ -54,8 +55,8 @@ function checkCellIsUnderAttack(
 
 function checkFiguresBetweenCells(
   board: ChessBoard,
-  startCoords: [number, number],
-  targetCoords: [number, number]
+  startCoords: Coords,
+  targetCoords: Coords
 ) {
   const boardRows = board.getRows();
   const xDiff = targetCoords[0] - startCoords[0];
@@ -122,7 +123,7 @@ export interface IChessBoardFigureDescriptor<
   Type extends FigureType = FigureType
 > {
   type: Type;
-  side: "white" | "black";
+  side: Side;
 }
 
 export type FigureType =
@@ -136,24 +137,24 @@ export type FigureType =
 export interface IChessBoardFigure {
   getType(): FigureType;
 
-  getSide(): "white" | "black";
+  getSide(): Side;
 
   canPlaced(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean;
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean;
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean;
 
@@ -166,7 +167,7 @@ export interface IChessBoardFigure {
 
 abstract class ChessBoardFigure implements IChessBoardFigure {
   protected _type: FigureType;
-  protected _side: "white" | "black";
+  protected _side: Side;
 
   protected constructor(descriptor: IChessBoardFigureDescriptor) {
     this._type = descriptor.type;
@@ -181,8 +182,8 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
 
   canPlaced(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     return (
       this.canMove(board, startCoords, targetCoords) ||
@@ -197,7 +198,7 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
     };
   }
 
-  getSide(): "white" | "black" {
+  getSide(): Side {
     return this._side;
   }
 
@@ -217,8 +218,8 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     let tmpBoard = board.clone();
 
@@ -242,8 +243,8 @@ abstract class ChessBoardFigure implements IChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     if (!this._isEnemyOnCell(board.getCell(targetCoords))) {
@@ -322,8 +323,8 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     return (
       Math.abs(targetCoords[0] - startCoords[0]) <= 1 &&
@@ -334,8 +335,8 @@ export class ChessBoardFigureKing extends ChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     return (
@@ -362,8 +363,8 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     // Exclude move on x line
     if (targetCoords[1] - startCoords[1] !== 0) {
@@ -394,8 +395,8 @@ export class ChessBoardFigurePawn extends ChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     // TODO: Handle attack on enemy first step
@@ -437,8 +438,8 @@ class ChessBoardFigureBishop extends ChessBoardFigure {
   }
 
   checkMovePattern(
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ) {
     return (
       Math.abs(targetCoords[0] - startCoords[0]) ===
@@ -448,8 +449,8 @@ class ChessBoardFigureBishop extends ChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     return (
       this.checkMovePattern(startCoords, targetCoords) &&
@@ -460,8 +461,8 @@ class ChessBoardFigureBishop extends ChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     return (
@@ -486,8 +487,8 @@ class ChessBoardFigureQueen extends ChessBoardFigure {
   }
 
   checkMovePattern(
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ) {
     const yDiff = targetCoords[1] - startCoords[1];
     const xDiff = targetCoords[0] - startCoords[0];
@@ -497,8 +498,8 @@ class ChessBoardFigureQueen extends ChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     return (
       this.checkMovePattern(startCoords, targetCoords) &&
@@ -509,8 +510,8 @@ class ChessBoardFigureQueen extends ChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     return (
@@ -535,8 +536,8 @@ class ChessBoardFigureRook extends ChessBoardFigure {
   }
 
   checkMovePattern(
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ) {
     const yDiff = targetCoords[1] - startCoords[1];
     const xDiff = targetCoords[0] - startCoords[0];
@@ -546,8 +547,8 @@ class ChessBoardFigureRook extends ChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     return (
       this.checkMovePattern(startCoords, targetCoords) &&
@@ -558,8 +559,8 @@ class ChessBoardFigureRook extends ChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     return (
@@ -584,8 +585,8 @@ class ChessBoardFigureKnight extends ChessBoardFigure {
   }
 
   checkMovePattern(
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ) {
     const yDiff = targetCoords[1] - startCoords[1];
     const xDiff = targetCoords[0] - startCoords[0];
@@ -598,8 +599,8 @@ class ChessBoardFigureKnight extends ChessBoardFigure {
 
   canMove(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number]
+    startCoords: Coords,
+    targetCoords: Coords
   ): boolean {
     return (
       this.checkMovePattern(startCoords, targetCoords) &&
@@ -609,8 +610,8 @@ class ChessBoardFigureKnight extends ChessBoardFigure {
 
   canAttack(
     board: ChessBoard,
-    startCoords: [number, number],
-    targetCoords: [number, number],
+    startCoords: Coords,
+    targetCoords: Coords,
     ignoreKingUnderAttackChecking?: true
   ): boolean {
     return (

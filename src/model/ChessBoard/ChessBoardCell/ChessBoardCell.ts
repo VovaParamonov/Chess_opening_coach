@@ -1,16 +1,17 @@
 import ChessBoardFigure, {
   IChessBoardFigure,
 } from "../ChessBoardFigure/ChessBoardFigure";
+import { Coords } from "@/model/ChessCore/ChessCore";
 
 export interface IChessBoardCellDescriptor {
-  coords: [number, number];
+  coords: Coords;
   currentFigure?: ChessBoardFigure | null;
 }
 
 export interface IChessBoardCell {
   getColor(): string;
 
-  getCoords(): [number, number];
+  getCoords(): Coords;
 
   getCurrentFigure(): IChessBoardFigure | null;
 
@@ -20,7 +21,7 @@ export interface IChessBoardCell {
 
   toDescriptor(): IChessBoardCellDescriptor;
 
-  isOnCoords(coords: [number, number]): boolean;
+  isOnCoords(coords: Coords): boolean;
 
   clear(): ChessBoardCell;
 
@@ -28,7 +29,7 @@ export interface IChessBoardCell {
 }
 
 export default class ChessBoardCell implements IChessBoardCell {
-  private _coords: [number, number];
+  private _coords: Coords;
   private _currentFigure: ChessBoardFigure | null;
 
   constructor(descriptor: IChessBoardCellDescriptor) {
@@ -81,7 +82,7 @@ export default class ChessBoardCell implements IChessBoardCell {
     };
   }
 
-  isOnCoords(coords: [number, number]): boolean {
+  isOnCoords(coords: Coords): boolean {
     return this._coords[0] === coords[0] && this._coords[1] === coords[1];
   }
 

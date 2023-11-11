@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 import { ChessBoardFigure } from "@/components/ChessBoard/ChessBoardFigure/ChessBoardFigure";
 import { default as ChessBoardCellModel } from "@/model/ChessBoard/ChessBoardCell/ChessBoardCell";
+import { Side } from "@/model/ChessCore/ChessCore";
 
 type ChessBoardCellStyledProps = {
-  color: "black" | "white";
+  color: Side;
 };
 
 const ChessBoardCellStyled = styled.div<ChessBoardCellStyledProps>`

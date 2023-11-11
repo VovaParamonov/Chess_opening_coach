@@ -8,11 +8,12 @@ import {
 } from "@/model/ChessBoard/ChessBoardFigure/ChessBoardFigure";
 
 import GameSession from "../GameSession";
+import { Coords } from "@/model/ChessCore/ChessCore";
 
 async function handleEachStartMapPos(
   cb: (
     cellDesc: (IChessBoardFigureChildDescription & { type: FigureType }) | null,
-    coords: [number, number]
+    coords: Coords
   ) => Promise<void> | void
 ) {
   const startMap = getChessBoardStartMap();

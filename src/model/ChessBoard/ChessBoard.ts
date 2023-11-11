@@ -3,6 +3,7 @@ import ChessBoardFigure, {
   FigureType,
   IChessBoardFigureChildDescription,
 } from "./ChessBoardFigure/ChessBoardFigure";
+import { Coords } from "@/model/ChessCore/ChessCore";
 
 export function getChessBoardStartMap(): (
   | (IChessBoardFigureChildDescription & { type: FigureType })
@@ -70,7 +71,7 @@ export function getChessBoardStartMap(): (
 
 export type ChessBoardRows = ChessBoardCell[][];
 
-interface IChessBoardDescriptor {
+export interface IChessBoardDescriptor {
   rows?: ChessBoardRows;
   deadFigures?: ChessBoardFigure[];
 }
@@ -78,9 +79,9 @@ interface IChessBoardDescriptor {
 export interface IChessBoard {
   getRows(): ChessBoardRows;
 
-  getCell(coords: [number, number]): ChessBoardCell;
+  getCell(coords: Coords): ChessBoardCell;
 
-  updateCell(coords: [number, number], newCell: ChessBoardCell): ChessBoard;
+  updateCell(coords: Coords, newCell: ChessBoardCell): ChessBoard;
 
   getDeadFigures(): ChessBoardFigure[];
 
@@ -88,10 +89,7 @@ export interface IChessBoard {
 
   toDescriptor(): IChessBoardDescriptor;
 
-  updateFigurePosition(
-    startCoords: [number, number],
-    targetCoords: [number, number]
-  ): ChessBoard;
+  updateFigurePosition(startCoords: Coords, targetCoords: Coords): ChessBoard;
 }
 
 export default class ChessBoard implements IChessBoard {
@@ -107,13 +105,13 @@ export default class ChessBoard implements IChessBoard {
     return this._deadFigures;
   }
 
-  getCell(coords: [number, number]): ChessBoardCell {
+  getCell(coords: Coords): ChessBoardCell {
     const rows = this.getRows();
 
     return rows[coords[0]][coords[1]];
   }
 
-  updateCell(coords: [number, number], newCell: ChessBoardCell): ChessBoard {
+  updateCell(coords: Coords, newCell: ChessBoardCell): ChessBoard {
     const newRows = this.getRows();
 
     newRows[coords[0]][coords[1]] = newCell;
@@ -141,10 +139,7 @@ export default class ChessBoard implements IChessBoard {
     });
   }
 
-  updateFigurePosition(
-    startCoords: [number, number],
-    targetCoords: [number, number]
-  ): ChessBoard {
+  updateFigurePosition(startCoords: Coords, targetCoords: Coords): ChessBoard {
     const startCell = this.getCell(startCoords).clone();
     const targetCell = this.getCell(targetCoords).clone();
 
@@ -190,7 +185,7 @@ export default class ChessBoard implements IChessBoard {
     return rows;
   }
 
-  static getStartFigureByCoords(coords: [number, number]) {
+  static getStartFigureByCoords(coords: Coords) {
     const chessBoardStartMap = getChessBoardStartMap();
 
     const initFigureDescription = chessBoardStartMap[coords[0]][coords[1]];

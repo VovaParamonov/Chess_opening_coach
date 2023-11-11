@@ -1,10 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
-
 import { default as ChessBoardFigureModel } from "@/model/ChessBoard/ChessBoardFigure/ChessBoardFigure";
+import { Side } from "@/model/ChessCore/ChessCore";
 
 interface IChessBoardFigureStyledProps {
-  side: "white" | "black";
+  side: Side;
   selected?: boolean;
 }
 
